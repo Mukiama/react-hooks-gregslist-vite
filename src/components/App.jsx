@@ -16,10 +16,13 @@ function App() {
     .catch(error => console.log(error.message))
   },[]);
 
+  //define function to add listing to useState
+  const addListing = newListing=> setListings(previousListings =>[...previousListings, newListing])
+
   return (
     <div className="app">
       <Header />
-      <ListingForm />
+      <ListingForm addListing={addListing} />
       <ListingsContainer listings={listings} /> 
     </div>
   );
