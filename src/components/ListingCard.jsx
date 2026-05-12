@@ -1,4 +1,5 @@
-function ListingCard() {
+//destructure props from listing
+function ListingCard({description, image, location, favorite}) {
   return (
     <li className="card">
       <div className="image">
