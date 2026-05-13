@@ -5,14 +5,14 @@
       "description": "heater",
       "image": "/images/heater.jpg",
       "location": "BROOKLYN",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "2",
       "description": "2019 Toyota Tacoma grill",
       "image": "/images/toyota-grill.jpg",
       "location": "Williamsburg",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "3",
@@ -26,7 +26,7 @@
       "description": "FREE Hundreds of DVD/CD Cases - Different Sizes and Colors",
       "image": "/images/dvd-cases.jpg",
       "location": "Prospect Heights",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "5",

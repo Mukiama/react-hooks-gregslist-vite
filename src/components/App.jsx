@@ -19,11 +19,17 @@ function App() {
   //define function to add listing to useState
   const addListing = newListing=> setListings(previousListings =>[...previousListings, newListing])
 
+  //define function to update a listing in stata
+  const updateListing = updatedListing => setListings(previousListings=> previousListings.map(listing => 
+    listing.id === updatedListing.id ? updatedListing : listing
+  ))
+
   return (
     <div className="app">
       <Header />
       <ListingForm addListing={addListing} />
-      <ListingsContainer listings={listings} /> 
+      <ListingsContainer listings={listings} 
+      updateListing= {updateListing}/> 
     </div>
   );
 }
