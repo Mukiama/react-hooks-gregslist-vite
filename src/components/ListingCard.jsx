@@ -1,5 +1,5 @@
 //destructure props from listing as we'll need for the fetch request
-function ListingCard({id, description, image, location, favorite, updateListing}) {
+function ListingCard({id, description, image, location, favorite, updateListing, deleteListing}) {
   //define onClick event handler
   // add fetch to event handler
   const handleFavorite = () => {
@@ -14,6 +14,18 @@ function ListingCard({id, description, image, location, favorite, updateListing}
         })
     .then(updateListing)  //use prop to update state
     .catch(error => console.log(error.message))
+  }
+  //create onClick event handler 
+  //add fetch request
+  const handleDelete = () => {
+    fetch(`http://localhost:6001/listings/${id}`, {
+      method: "DELETE",
+    })
+     .then(r => {
+          if (!r.ok) {throw new Error("Delete failed") }
+          deleteListing(id)
+        })
+      .catch(error => console.log(error.message))
   }
   
   return (
@@ -31,7 +43,8 @@ function ListingCard({id, description, image, location, favorite, updateListing}
         )}
         <strong>{"description"}</strong>
         <span> · {"location"}</span>
-        <button className="emoji-button delete">🗑</button>
+        {/* add event handler */}
+        <button onClick= {handleDelete} className="emoji-button delete">🗑</button>
       </div>
     </li>
   );

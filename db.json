@@ -71,9 +71,6 @@
       "id": "7f6f"
     },
     {
-      "id": "463a"
-    },
-    {
       "id": "e98c"
     },
     {
@@ -86,16 +83,10 @@
       "id": "8ee7"
     },
     {
-      "id": "8dfd"
-    },
-    {
       "id": "045d"
     },
     {
       "id": "f470"
-    },
-    {
-      "id": "e64f"
     },
     {
       "id": "5243"
@@ -155,9 +146,6 @@
       "id": "9772"
     },
     {
-      "id": "3a79"
-    },
-    {
       "id": "f453"
     },
     {
@@ -168,27 +156,6 @@
     },
     {
       "id": "069b"
-    },
-    {
-      "id": "da76",
-      "description": "",
-      "image": "",
-      "location": "",
-      "favorite": false
-    },
-    {
-      "id": "b752",
-      "description": "Moringa",
-      "image": "",
-      "location": "Nairobi",
-      "favorite": false
-    },
-    {
-      "id": "17f7",
-      "description": "Moringa ",
-      "image": "ddddd",
-      "location": "Nairobi",
-      "favorite": false
     }
   ]
 }
