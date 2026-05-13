@@ -1,6 +1,7 @@
 import Search from "./Search";
 
-function Header() {
+//destructure onSearch from props object
+function Header({search, onSearch}) {
   return (
     <header>
       <h1>
@@ -9,7 +10,8 @@ function Header() {
         </span>
         gregslist
       </h1>
-      <Search />
+      {/*pass onSearch to the Search Component */}
+      <Search search= {search} onSearch={onSearch} />
     </header>
   );
 }

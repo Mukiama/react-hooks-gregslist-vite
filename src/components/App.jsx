@@ -5,6 +5,8 @@ import ListingsContainer from "./ListingsContainer";
 
 function App() {
   const [listings, setListings] = useState([])
+  //create state to hold search query
+  const [search, setSearch] = useState("")
   //add useEffect to App component with empty dependency array
   useEffect (() => {
     fetch("http://localhost:6001/listings")
@@ -25,11 +27,15 @@ function App() {
   ))
 // define function to delete a listing in state
 const deleteListing= deletedListingId  => setListings(previousListings=> previousListings.filter(listing => listing.id !==deletedListingId))
+//filter listings by the search query 
+const displayedListings = listings.filter((listing) => (listing.description || "").toLowerCase().includes(search.toLowerCase()))
   return (
     <div className="app">
-      <Header />
+      {/*pass onSearch as setSearch*/}
+      <Header search= {search} onSearch={setSearch}/>
       <ListingForm addListing={addListing} />
-      <ListingsContainer listings={listings} 
+      {/*change the listings passed down to the new filtered listings*/}
+      <ListingsContainer listings={displayedListings} 
       updateListing= {updateListing}
       deleteListing= {deleteListing}/> 
     </div>
